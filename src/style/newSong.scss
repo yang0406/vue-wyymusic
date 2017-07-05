@@ -1,0 +1,144 @@
+.new-song-container {
+  padding: {
+    left: 3rem;
+    right: 3rem;
+  }
+  .new-song-nav {
+    height: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    line-height: 4rem;
+    border-bottom: 1px solid #e4e4e4;
+    li {
+      display: inline-block;
+      height: 95%;
+      width: 8rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      vertical-align: middle;
+      cursor: pointer;
+      &:hover {
+        color: #c62f2f;
+      }
+    }
+    .active {
+      color: #c62f2f;
+      border-bottom: 3px solid #c62f2f;
+    }
+  }
+  .new-song {
+    width: 100rem;
+    margin: 4rem auto;
+    list-style: none;
+    border: 1px solid #e4e4e4;
+    li {
+      font-size: 13px;
+      height: 6rem;
+      line-height: 6rem;
+      cursor: default;
+      &:hover {
+        background-color: #ecedee;
+      }
+      img {
+        width: 4rem;
+        height: 4rem;
+        margin-right: .5rem;
+        vertical-align: middle;
+        border: 2px solid #e4e4e4;
+      }
+      >span {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+      }
+      .alias {
+        margin-left: .5rem;
+        color: #888;
+      }
+      .index {
+        width: 4rem;
+        margin-left: 1rem;
+        color: #999;
+      }
+      .song-name {
+        width: 40rem;
+      }
+      .singer {
+        width: 10rem;
+        color: #555;
+        cursor: pointer;
+        &:hover {
+          color: #000;
+        }
+      }
+      .album {
+        width: 30rem;
+        color: #555;
+        cursor: pointer;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+    li:nth-child(even) {
+      background-color: #f5f5f7;
+      &:hover {
+        background-color: #ecedee;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1450px) {
+  .new-song-container {
+    .new-song {
+      width: 90rem;
+      li {
+        .song-name {
+          width: 30rem;
+        }
+      }
+    }
+  }
+}
+#black {
+  .new-song-nav {
+    border-bottom: 1px solid #202226;
+    li {
+      color: #818284;
+      &:hover {
+        color: #c8c9d0;
+      }
+    }
+    .active {
+      color: #c8c9d0;
+      border-bottom: 3px solid #5c5e61;
+    }
+  }
+  .new-song {
+    border: 1px solid #202226;
+    .song-name {
+      color: #c8c9d0;
+    }
+    img {
+      border-color: transparent;
+    }
+    li {
+      background-color: #1b1d20;
+      .duration {
+        color: #555;
+      }
+    }
+    li:hover {
+      background-color: #242629;
+      .singer,
+      .album {
+        color: #fff;
+      }
+    }
+    li:nth-child(even) {
+      background-color: #16181c;
+    }
+  }
+}

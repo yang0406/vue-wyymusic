@@ -1,0 +1,26 @@
+.lyrics-container {
+  position: relative;
+  height: 73%;
+  margin-top: 3rem;
+  overflow: hidden;
+  font-size: 13px;
+  .lyrics {
+    transition: transform .5s;
+  }
+  p {
+    margin: {
+      top: 1.5rem;
+      bottom: 1.5rem;
+    }
+  }
+  .now {
+    color: #ededee;
+  }
+  .no-lyric {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 14px;
+  }
+}

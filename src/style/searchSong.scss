@@ -1,0 +1,252 @@
+.search-list-head {
+  box-sizing: border-box;
+  height: 3rem;
+  color: #555;
+  font-size: 13px;
+  line-height: 3rem;
+  border-bottom: 1px solid #ced6d7;
+  span {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 13px;
+    vertical-align: middle;
+    border-right: 1px solid #ced6d7;
+  }
+  .space,
+  .option {
+    width: 5rem;
+  }
+  .space {
+    height: 100%;
+  }
+  .music-title {
+    width: 40rem;
+  }
+  .singer {
+    width: 30rem;
+  }
+  .album-name {
+    width: 35rem;
+  }
+  .duration {
+    width: 5rem;
+    border-right: 0;
+  }
+}
+.songs {
+  margin-bottom: 5rem;
+  li {
+    line-height: 3rem;
+    &:hover {
+      background-color: #ecedee;
+    }
+  }
+  span {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
+  .index,
+  .option {
+    width: 5rem;
+    color: #777;
+  }
+  .index {
+    text-align: right;
+  }
+  .music-title {
+    width: 40rem;
+  }
+  div.music-title {
+    display: inline-block;
+    height: 6rem;
+    margin-left: 1rem;
+    font-size: 13px;
+    vertical-align: top;
+  }
+  .alias {
+    color: #888;
+  }
+  .singer {
+    width: 30rem;
+    color: #777;
+    cursor: pointer;
+  }
+  .album-name {
+    width: 35rem;
+    color: #777;
+    cursor: pointer;
+  }
+  .duration {
+    width: 5rem;
+    color: #777;
+  }
+  li:nth-child(even) {
+    background-color: #f5f5f7;
+    &:hover {
+      background-color: #ecedee;
+    }
+  }
+}
+.page {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    ul {
+      list-style: none;
+      .fa {
+        color: #646464;
+        font-size: 14px;
+        vertical-align: middle;
+      }
+      li {
+        display: inline-block;
+        height: 2.4rem;
+        padding: 0 .9rem;
+        color: #a4a4a4;
+        line-height: 2.4rem;
+        text-align: center;
+        font-size: 12px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        &:hover {
+          color: #646464;
+          border: 1px solid #c3c4c7;
+          background-color: #ecedf1;
+        }
+      }
+      .pre-btn,
+      .next-btn {
+        border: 2px solid #e9e9e9;
+        &:hover {
+          border: 2px solid #e9e9e9;
+        }
+      }
+      .apostrophe {
+        cursor: default;
+        &:hover {
+          border: 1px solid transparent;
+          background-color: transparent;
+        }
+      }
+      .active {
+        color: #c62f2f;
+        text-decoration: underline;
+        border: none;
+        cursor: default;
+        &:hover {
+          color: #c62f2f;
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1450px) {
+    .search-list-head {
+      .music-title {
+        width: 30rem;
+      }
+    .singer {
+      width: 20rem;
+    }
+    .album-name {
+      width: 25rem;
+    }
+  }
+  .songs {
+    .music-title {
+      width: 30rem;
+    }
+    .singer {
+      width: 20rem;
+      color: #777;
+      cursor: pointer;
+    }
+    .album-name {
+      width: 25rem;
+      color: #777;
+      cursor: pointer;
+    }
+  }
+}
+#black {
+  li {
+    .music-title {
+      color: #d6d7de;
+    }
+    &:hover {
+      background-color: #242629;
+      color: #d6d7de;
+    }
+  }
+  .search-list-head {
+    .music-title {
+      color: #777;
+    }
+    color: #d6d7de;
+    background: #16181c;
+    border-bottom: 1px solid #22252a;
+    span {
+      border-right: 1px solid #22252a;
+    }
+  }
+  .songs{
+    .index,
+    .option {
+      color: #777;
+    }
+    .singer {
+      color: #777;
+    }
+    .album-name {
+      color: #777;
+    }
+    .duration {
+      color: #777;
+    }
+    li:nth-child(even) {
+      background-color: #1b1c20;
+      &:hover {
+        background-color: #242629;
+      }
+    }
+  }
+  .page {
+    ul {
+      .fa {
+        color: #7a7b7d;
+      }
+      li {
+        color: #a4a4a4;
+        &:hover {
+          color: #fff;
+          border: 1px solid #1f2227;
+          background-color: #282b32;
+        }
+      }
+      .pre-btn,
+      .next-btn {
+        border: 2px solid #1f2227;
+        &:hover {
+          border: 2px solid #1f2227;
+        }
+      }
+      .active {
+        color: #c62f2f;
+        &:hover {
+          color: #c62f2f;
+        }
+      }
+    }
+  }
+  .loading {
+    p {
+      color: #a4a4a4;
+    }
+  }
+}

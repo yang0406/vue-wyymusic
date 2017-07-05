@@ -1,0 +1,367 @@
+.play-container {
+  position: absolute;
+  top: 5rem;
+  bottom: 4.6rem;
+  width: 100%;
+  background: #fff;
+  z-index: 4;
+  transform-origin: left bottom;
+  transition: all .5s;
+  overflow-y:auto;
+  overflow-x: hidden;
+  background-color: #fafafa;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #cecece;
+    &:hover {
+      background-color: #aeaeae;
+    }
+  }
+}
+.hide {
+  transform: scale(0, 0);
+}
+.show {
+  transform: scale(1, 1);
+}
+.play-box{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+.shadow {
+  width: 120rem;
+  height: 35rem;
+  margin: 0 auto;
+  transform: translateX(-5%);
+  filter: blur(130px);
+}
+.btn-box {
+  width: 34rem;
+  text-align: center;
+  button {
+    width: 7rem;
+    height: 3rem;
+    margin: .5rem;
+    color: #737374;
+    border: 1px solid #b2b8b7;
+    background-color: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f3f4f5;
+      .fa {
+        color: #333;
+      }
+      .fa-heart {
+        color: #c62f2f;
+      }
+    }
+    .fa {
+      margin-right: 3px;
+    }
+    .fa-heart {
+      color: #c62f2f;
+    }
+  }
+}
+.detail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 44rem;
+  right: 0;
+  .song-name {
+    position: relative;
+    padding: {
+      top: 3rem;
+      bottom: 1rem;
+    }
+    font-size: 22px;
+    color: #292a28;
+    span {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 4rem;
+      height: 3rem;
+      line-height: 3rem;
+      text-align: center;
+      color: #555;
+      border-radius: 3px;
+      background: rgba(250, 250, 250, .3);
+      cursor: pointer;
+      &:hover {
+        background: rgba(250, 250, 250, .6);
+      }
+    }
+  }
+  .song-detail {
+    font-size: 12px;
+    .album-name,
+    .singer {
+      color: #3f6bad;
+      cursor: pointer;
+      &:hover {
+        color: #0a4aab;
+      }
+    }
+    .album-name,
+    .singer {
+      display: inline-block;
+      width: 10rem;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: top;
+    }
+  }
+}
+.comment-container {
+  position: absolute;
+  top: 50rem;
+  left: 50%;
+  width: 80rem;
+  transform: translateX(-50%);
+  .comment-head {
+    padding: 1rem 0;
+    font-size: 18px;
+    color: #444;
+    border-bottom: 1px solid #e4e4e4;
+    .comment-num {
+      margin-left: 2rem;
+      font-size: 13px;
+      color: #ababab;
+    }
+  }
+  .hot-comment-head,
+  .new-comment-head {
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+    font-size: 16px;
+    color: #949494;
+    font-family: "SimSun";
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .comment-box {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: {
+      top: 2rem;
+      bottom: 2rem;
+    }
+    border-bottom: 1px solid #e1e1e1;
+    .avatar {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      > img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
+    }
+    .content {
+      width: 95%;
+      margin-left: 2rem;
+      font-size: 12px;
+      .user-name {
+        color: #2481c8;
+      }
+      .replied {
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: #f1f1f4;
+      }
+      .content-footer {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin-top: 1rem;
+        color: #9e9e9e;
+        div:nth-of-type(2) {
+          span {
+            padding: {
+              left: 1rem;
+              right: 1rem;
+            }
+          }
+          span:nth-of-type(2) {
+            border-left: 2px solid #d9d9d9;
+            border-right: 2px solid #d9d9d9;
+          }
+        }
+      }
+    }
+  }
+  .page {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    ul {
+      list-style: none;
+      .fa {
+        color: #646464;
+        font-size: 14px;
+        vertical-align: middle;
+      }
+      li {
+        display: inline-block;
+        height: 2.4rem;
+        padding: 0 .9rem;
+        color: #a4a4a4;
+        line-height: 2.4rem;
+        text-align: center;
+        font-size: 12px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        &:hover {
+          color: #646464;
+          border: 1px solid #c3c4c7;
+          background-color: #ecedf1;
+        }
+      }
+      .pre-btn,
+      .next-btn {
+        border: 2px solid #e9e9e9;
+        &:hover {
+          border: 2px solid #e9e9e9;
+        }
+      }
+      .apostrophe {
+        cursor: default;
+        &:hover {
+          border: 1px solid transparent;
+          background-color: transparent;
+        }
+      }
+      .active {
+        color: #c62f2f;
+        text-decoration: underline;
+        border: none;
+        cursor: default;
+        &:hover {
+          color: #c62f2f;
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+  }
+  .loading {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5rem;
+    text-align: center;
+    > p {
+      margin-top: 3rem;
+    }
+    .fa {
+      color: #c62f2f;
+      font-size: 30px;
+    }
+  }
+
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+#black {
+  .btn-box {
+    button {
+      color: #616267;
+      border: 1px solid #2c2c31;
+      background-color: #2c2c31;
+      .fa {
+        color: #48494c;
+      }
+      &:hover {
+        background-color: #323338;
+        .fa {
+          color: #aaabaf;
+        }
+        .fa-heart {
+          color: #c62f2f;
+        }
+      }
+      .fa-heart {
+        color: #c62f2f;
+      }
+    }
+  }
+  .song-name {
+    color: #cfcfd0;
+  }
+  .song-detail {
+    color: #cfcfd0;
+  }
+  .comment-head {
+    color: #c5c6cc;
+    border-bottom: 1px solid #1f2227;
+  }
+  .hot-comment-head,
+  .new-comment-head {
+    border-bottom: 1px solid #1f2227;
+  }
+  .comment-box {
+    color: #b2b4ba;
+    border-bottom: 1px solid #1f2227;
+  }
+  .replied {
+    background-color: #1c1e23;
+  }
+  .content-footer {
+    color: #48494d;
+    div:nth-of-type(2) {
+      span:nth-of-type(2) {
+        border-left: 2px solid #1f2227;
+        border-right: 2px solid #1f2227;
+      }
+    }
+  }
+  .page {
+    ul {
+      .fa {
+        color: #7a7b7d;
+      }
+      li {
+        color: #a4a4a4;
+        &:hover {
+          color: #fff;
+          border: 1px solid #1f2227;
+          background-color: #282b32;
+        }
+      }
+      .pre-btn,
+      .next-btn {
+        border: 2px solid #1f2227;
+        &:hover {
+          border: 2px solid #1f2227;
+        }
+      }
+      .active {
+        color: #c62f2f;
+        &:hover {
+          color: #c62f2f;
+        }
+      }
+    }
+  }
+  .loading {
+    p {
+      color: #a4a4a4;
+    }
+  }
+}
